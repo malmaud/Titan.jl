@@ -75,8 +75,8 @@ macro gpu(expr)
 end
 
 function __init__()
-    const global LLVM_PATH = get(ENV, "LLVM_PATH", "/Users/malmaud/llvm/install/bin")
-    const global MODULES = Dict()
+    global LLVM_PATH = get(ENV, "LLVM_PATH", "/Users/malmaud/llvm/install/bin")
+    global MODULES = Dict()
     device(0)
     device_reset(0)
     CUDArt.free(CUDArt.malloc(UInt8, 1))
